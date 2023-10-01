@@ -1,9 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.calculator_getx">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="calculator_getx"
+        android:label="Calculator"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+        <meta-data
+            android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="201646443" />
+        <provider
+            android:authorities="com.startapp.flutter.sdk.${applicationId}"
+            android:name="com.startapp.flutter.sdk.StartAppFlutterHelper"
+            android:exported="false">
+            <meta-data
+                android:name="com.startapp.sdk.SPLASH_ADS_ENABLED"
+                android:value="false" />
+        </provider>
         <activity
             android:name=".MainActivity"
             android:exported="true"

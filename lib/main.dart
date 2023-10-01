@@ -1,10 +1,14 @@
 // ignore_for_file: prefer_const_constructors, unused_field, prefer_final_fields, duplicate_ignore, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'screens/calculator_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+
   runApp(const MyApp());
 }
 
