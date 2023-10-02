@@ -17,7 +17,7 @@ class CalculatorController extends GetxController {
       ));
     } else {
       Get.changeTheme(ThemeData.light().copyWith(
-        backgroundColor: Color(0xffDAD7D7),
+        scaffoldBackgroundColor: Color(0xffDAD7D7),
       ));
     }
     update();
